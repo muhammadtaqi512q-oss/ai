@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MT AI Search</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+text-align:center;
+background:#1e293b;
+padding:40px;
+border-radius:10px;
+width:400px;
+}
+
+input{
+width:90%;
+padding:12px;
+border:none;
+border-radius:5px;
+margin-top:10px;
+}
+
+button{
+margin-top:10px;
+padding:12px 20px;
+border:none;
+background:#22c55e;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h2>MT AI Search</h2>
+
+<p>Ask anything</p>
+
+<input id="question" placeholder="Ask your question...">
+
+<br>
+
+<button onclick="searchAI()">Ask AI</button>
+
+</div>
+
+<script>
+
+function searchAI(){
+
+let q = document.getElementById("question").value;
+
+if(q==""){
+alert("Write question");
+return;
+}
+
+let url = "https://www.google.com/search?q=" + encodeURIComponent(q);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
